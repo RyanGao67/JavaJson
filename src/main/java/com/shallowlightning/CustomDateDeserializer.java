@@ -14,14 +14,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class CustomDateDeserializer extends StdDeserializer<Date> {
-
     private static final long serialVersionUID = -5451717385630622729L;
     private SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");
 
     public CustomDateDeserializer() {
         this(null);
     }
-
     public CustomDateDeserializer(final Class<?> vc) {
         super(vc);
     }
@@ -35,5 +33,4 @@ public class CustomDateDeserializer extends StdDeserializer<Date> {
             throw new RuntimeException(e);
         }
     }
-
 }

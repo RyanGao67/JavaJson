@@ -10,14 +10,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class CustomDateSerializer extends StdSerializer<Date> {
-
     private static final long serialVersionUID = -2894356342227378312L;
     private SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");
 
     public CustomDateSerializer() {
         this(null);
     }
-
     public CustomDateSerializer(final Class<Date> t) {
         super(t);
     }
